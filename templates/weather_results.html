@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Weather Results{% endblock %}
+<link rel="stylesheet" href="/static/style.css">
+
+
+{% block content %}
+
+    <div class="main">
+        <div class="description">
+            The current temperature is {{ temperature }}° in {{ users_city }}. The
+            weather description is {{ weather_description }} with {{ humidity_level }}%
+            humidity.
+        </div>
+        <div class="mood-div">
+            How does the current weather in {{ users_city}} make you feel?<br>
+            <div class="mood-selector">
+                <label for="items">Choose a mood:</label>
+
+                <select id="items">
+                    <option value="item-1">Happy</option>
+                    <option value="item-2">Sad</option>
+                    <option value="item-3">Angry</option>
+                    <option value="item-4">Meh</option>
+                </select>
+            </div>
+        </div>
+        <div class="back">
+            <form action="/">
+                Go back to main page
+                <input type="submit" value="Go back">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

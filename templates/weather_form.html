@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Form{% endblock %}
+<link rel="stylesheet" href="/static/style.css">
+
+{% block content %}
+<div class="form-container">
+    <form action="/weather_results">
+        Type in your city:<br>
+        <input type="text" name="city" value="City"><br>
+        <input type="submit" value="Submit!">
+    </form>
+</div>
+
+{% endblock %}
